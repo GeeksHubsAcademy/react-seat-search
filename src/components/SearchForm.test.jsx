@@ -23,7 +23,7 @@ describe('Search form unit test', () => {
 
     const wrapper = shallow(<SearchForm onChangeFilter={updateFilter}/>);
 
-    wrapper.find('input[name="price_from"]').simulate('change', {target:{value: '100'}});
+    wrapper.find('input[name="price_from"]').simulate('change', {target:{value: '100', name:'price_from'}});
 
     expect(updateFilter).toHaveBeenCalledWith({
         price_from: '100',
